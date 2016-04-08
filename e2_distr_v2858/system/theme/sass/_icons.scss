@@ -1,0 +1,116 @@
+.i-loading {
+  @include icon('loading-spinner.gif', 'loading-spinner.gif', 1, 1);
+  top: -2px;
+}
+
+.i-edit {
+  @include icon('edit.png', 'edit.png', 1, 1);
+  top: -2px;
+}
+
+.i-edit-small {
+  @include icon('edit-small.png', 'edit-small.png', 1, 1);
+  top: -2px;
+}
+
+.i-login {
+  @include icon('login.png', 'login.png', 1, 1);
+}
+
+.i-lock {
+  @include icon('lock.png', 'lock.png', 1, 1);
+}
+
+.i-lock-mini {
+  @include icon('lock-mini.png', 'lock-mini.png', 1, 1);
+}
+
+.i-tick {
+  @include icon('tick.png', 'tick.png', 1, 1);
+  top: -2px;
+}
+
+.i-blank {
+  @include icon('blank-window.gif', 'blank-window.gif', 1, 1);
+  top: -2px;
+}
+
+.i-remove-pic {
+  @include icon('remove-pic.png', 'remove-pic.png', 1, 1);
+  top: -2px;
+}
+
+.i-attach {
+  @include icon('attach.gif', 'attach.gif', 1, 1);
+  top: -3px;
+}
+
+.i-remove {
+  @include icon('remove.png', 'remove.png', 1, 1);
+  top: -2px;
+}
+
+.i-favourite {
+  @include icon('star.gif', 'star.gif');
+  top: -2px;
+}
+
+.i-favourite-set {
+  @include icon('star-set.png', 'star-set.png');
+  top: -2px;
+}
+
+.i-favourite-unset {
+  @include icon('star-unset.png', 'star-unset.png');
+  top: -2px;
+}
+
+.i-important-set {
+  @include icon('marker-remove.png', 'marker-remove.png');
+  top: -2px;
+}
+
+.i-important-unset {
+  @include icon('marker.png', 'marker.png');
+  top: -2px;
+}
+
+.i-pinned-set {
+  @include icon('pinned.png', 'pinned.png');
+  top: -2px;
+}
+
+.i-pinned-unset {
+  @include icon('pin.png', 'pin.png');
+  top: -2px;
+}
+
+.i-reply {
+  @include icon('reply.png', 'reply.png');
+  top: -2px;
+}
+
+.i-email {
+  @include icon('email.png', 'email.png');
+  top: -2px;
+}
+
+.i-email-subscribed {
+  @include icon('email-subscribed.png', 'email-subscribed.png');
+  top: -2px;
+}
+
+.i-no-comments {
+  @include icon('no-comments.png', 'no-comments.png');
+  top: -2px;
+}
+
+.i-enter {
+  @include icon('enter.png', 'enter.png', 1, 2);
+  margin: 0 0 2px 0;
+}
+:hover>.i-enter {
+  @include icon('enter.png', 'enter.png', 2, 2);
+  margin: 0 0 2px 0;
+}
+

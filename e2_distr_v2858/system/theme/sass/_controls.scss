@@ -1,0 +1,229 @@
+input.text, textarea, select, button {
+  border: 1px #d0d0d0 solid;
+  border-radius: 3px;
+  padding: 4px;
+  @include transition-property((border-color, background));
+  @include transition-duration(.33s);
+  @include transition-timing-function(ease-out);
+}
+
+select {
+  -webkit-appearance: none;
+}
+
+input.text:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  border-color: $c_focus;
+  @include transition(none);
+}
+
+select {
+  padding-right: 19px;
+  background: image-url('chevron-down.png') right center no-repeat !important;
+}
+
+select > button {
+  display: none;
+}
+
+.form,
+.form-part,
+.form-control,
+.form-subcontrol {
+  float: left;
+  width: 100%;
+}
+
+.form-part,
+.form-control,
+.form-subcontrol {
+  clear: left;
+}
+
+.form-label {
+  clear: left;
+  float: left;
+  width: 17.07%;
+  padding: 0 20px 0 0;
+}
+
+.form-element {
+  margin-left: 17.07%;
+  width: 82.93%;
+}
+
+
+.form-part { width: 100%; margin: 0 0 24px 0 }
+
+.form-control { width: 100%; margin: 0 0 12px 0  }
+
+.form-control .input-label { margin-top: 5px /* 4px of input padding + 1px of input border */ }
+.form-control .input-error { background: #ffece0 }
+.form-control input.text { margin-bottom: 8px }
+.form-control input.big { font-size: 24px; margin-bottom: 8px }
+.form-control select,
+.form-control textarea { margin-bottom: 8px }
+.form-control .disabled { color: #999; }
+
+.form-subcontrol { width: 100%; margin: 0 0 8px 0 }
+.form-subcontrol-master { margin: 0 0 0 0 }
+.form-subcontrol-slave { margin: 0 0 0 16px }
+
+.form-control .full-width { width: 100%; }
+.form-control .width-4 { width: 80%; }
+.form-control .width-3 { width: 60%; }
+.form-control .width-2 { width: 40%; }
+.form-control .width-1 { width: 20%; }
+
+.form-control .icon {
+  position: relative;
+  left: -.5em;
+  width: 0;
+}
+
+.form-control .icon span.i-lock-mini,
+.form-control .icon span.i-loading {
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+
+// comment under input i.e. “separate by commas”
+.form-control-sublabel {
+  width: 75%;
+  font-size: 12px;
+}
+
+
+.submit-box, .delete-box {
+  /* border-top: #f0c040 1px solid; */
+  padding: 0 0 40px 0;
+  border-radius: 3px;
+}
+
+.submit-box p {
+  font-size: 13px;
+  color: #665;
+}
+
+.delete-box {
+  border: 0;
+  background: #e05030;
+  padding-top: 20px;
+  color: #fff;
+}
+
+.submit-box *, .delete-box * {
+  vertical-align: baseline;
+}
+
+.button {
+  display: inline;
+  display: inline-block;
+  outline: none;
+  padding: 4px 10px;
+  background: #f0f0f0;
+  border: 1px #e0e0e0 solid;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: normal;
+  font-family: sans-serif;
+  cursor: hand;
+  cursor: pointer;
+  color: #000;
+}
+
+.button:visited {
+  color: #000;
+  border-color: #e0e0e0;
+}
+
+.submit-box .button {
+  background: #ffe060;
+  border-color: #f0c040;
+}
+
+.delete-box .button {
+  background: #ffe4e0;
+  border-color: #d04000;
+}
+
+.button:disabled {
+  color: rgba(0, 0, 0, .25);
+  cursor: default;
+  pointer-events: none;
+}
+
+.button:active:hover {
+  box-shadow: inset 0 1px 4px rgba(0,0,0,.2)
+}
+
+.button:hover,
+.button.hover {
+  background: #f6f6f6;
+  @include transition(none);
+}
+
+.button:focus { border-color: #c0c0c0 }
+
+.submit-box .button:hover { background: #ffe86c }
+.submit-box .button:focus { border-color: #c08000 }
+
+.delete-box .button:hover { background: #fff0ec }
+.delete-box .button:focus { border-color: #802000 }
+
+.button * {
+  vertical-align: absmiddle;
+}
+
+.submit-button {
+  font-size: 16px;
+  padding: 10px 1.33em;
+  font-weight: bold;
+}
+
+.sign-in-button {
+  font-size: 13px;
+  padding: 4px 10px;
+}
+
+.e2-keyboard-shortcut {
+  background: #f0f0c0;
+  color: #a64;
+  padding: 0 .33em;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 85%;
+}
+
+.submit-box .e2-keyboard-shortcut {
+  background: transparent;
+  border: none;
+  margin-left: .67em;
+  color: #a06040;
+  font-weight: normal;
+  font-size: 85%;
+}
+
+.e2-keyboard-shortcut:empty {
+  display: none;
+}
+
+.input-remark {
+  margin-left: 1em;
+}
+
+
+
+.e2-toolbar {
+  margin: 0 0 20px 0;
+}
+
+.e2-toolbar a {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  margin-right: 1em;
+}

@@ -1,0 +1,76 @@
+.e2-text-picture a {
+  position: relative;
+  display: inline-block;
+}
+
+.e2-text-picture a .e2-text-picture-zoom-icon,
+.e2-text-picture a .e2-text-picture-zoom-in,
+.e2-text-picture a .e2-text-picture-zoomable {
+  position: absolute; 
+  width: 12px;
+  height: 12px;
+}
+
+.e2-text-picture a .e2-text-picture-zoom-icon {
+  right: 6px;
+  top: 6px;
+  //display: none;
+  opacity: 0;
+  @include transition-property(opacity);
+  @include transition-duration($time);
+  @include transition-timing-function(ease-out);
+}
+
+.e2-text-picture a:hover .e2-text-picture-zoom-icon {
+  //display: block;
+  opacity: 1;
+  @include transition(none);
+}
+
+.e2-text-picture a .e2-text-picture-zoom-in,
+.e2-text-picture a .e2-text-picture-zoomable,
+.e2-text-picture a img {
+  border-style: solid;
+}
+
+.e2-text-picture a .e2-text-picture-zoom-in {
+  right: 5px;
+  border-width: 0 2px 0 0;
+}
+
+.e2-text-picture a .e2-text-picture-zoomable {
+  top: 5px;
+  border-width: 2px 0 0 0;
+}
+
+.e2-text-picture a.e2-text-picture-zoomed .e2-text-picture-zoom-in {
+  //display: none;
+  opacity: 0;
+}
+
+.e2-text-picture a.e2-text-picture-link, 
+.e2-text-picture a.e2-text-picture-zoom-link {
+  border: none;
+}
+
+.e2-text-picture a img {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  border-width: 1px;
+  margin: -1px;
+}
+
+.e2-text-picture a img {
+  border-color: $c_light;
+  @include transition-property(border-color);
+  @include transition-duration($time);
+  @include transition-timing-function(ease-out);
+}
+
+.e2-text-picture a:hover img,
+.e2-text-picture a.hover img,
+.e2-text-picture a .e2-text-picture-zoom-in,
+.e2-text-picture a .e2-text-picture-zoomable {
+  border-color: $c_hover;
+  @include transition(none);
+}

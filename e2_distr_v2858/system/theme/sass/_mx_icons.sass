@@ -1,0 +1,37 @@
+=block-as-image($image, $imageIE: 0, $number: 1, $divide: 1, $icon: 1, $paddingTop: 0, $paddingLeft: 0, $paddingRight: 0)
+	background-image: image-url($image)
+	background-repeat: no-repeat
+	width: image-width($image)/$divide - $paddingLeft - $paddingRight
+	height: image-height($image) - $paddingTop
+	padding-top: $paddingTop
+	padding-left: $paddingLeft
+	padding-right: $paddingRight
+	display: block
+	background-position: -(($number - 1) * image-width($image)/$divide) 0
+	@if $icon == 1
+		font-size: 0
+		line-height: 0
+	@if $imageIE != 0
+		_background-image: image-url($imageIE)
+
+
+=icon($image, $imageIE, $number: 1, $divide: 1)
+	+block-as-image($image, $imageIE, $number, $divide)
+	+inline-block
+	position: relative
+	//cursor: pointer
+
+=icon_hover($image)
+	background-position: -(image-width($image)/2) 0
+
+=icon-with-hover($image, $imageIE: 0, $class: 0)
+	@if $class != 0
+		.#{$class}
+			+icon($image, $imageIE, 2)
+		&:hover, &.hover
+			.#{$class}
+				+icon_hover($image)
+	@else
+		+icon($image, $imageIE, 2)
+		&:hover, &.hover
+			+icon_hover($image)

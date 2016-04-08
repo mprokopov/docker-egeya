@@ -1,0 +1,35 @@
+// userpic
+.e2-user-picture-container {
+
+  display: inline-block;
+  max-width: 128px;
+  max-height: 128px;
+}
+
+.e2-user-picture-container-uploading {
+  background: image-url('loading-spinner.gif') center center no-repeat;
+}
+
+
+
+// generic drag-n-drop target
+.e2-external-drop-target-dragover {
+
+  position: relative;
+  background: rgba(96,160,255,.2);
+
+  @include transition(none);
+  border-color: $c_focus;
+
+  border-radius: 3px;
+
+}
+
+
+
+.e2-external-drop-target-dragover img,
+.e2-user-picture-container-uploading img {
+
+  opacity: .4;
+
+}

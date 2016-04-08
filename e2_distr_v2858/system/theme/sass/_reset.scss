@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li,
+pre,
+table, thead, tbody, tr, th, td,
+img, pre, tt, code,
+form, input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-indent: 0;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: baseline;
+}
+
+body,
+form, input, textarea, select, button {
+  font-family: sans-serif;
+}
+
+pre, tt, code, pre *, tt *, code * {
+  font-family: monospace;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+}
+
+form {
+  display: inline;
+}
+
+textarea {
+  width: 100%;
+}
+
+code {
+  white-space: pre;
+}
+
+img {
+  border: 0;
+}
+
+table {
+  empty-cells: show;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+th, td {
+  vertical-align: top;
+  text-align: left;
+}
+
+ul li {
+  list-style-type: none;
+}

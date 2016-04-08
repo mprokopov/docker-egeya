@@ -1,0 +1,17 @@
+db:
+  image: mysql:5.6
+  environment:
+    - MYSQL_ROOT_PASSWORD=egeya
+    - MYSQL_DATABASE=egeya
+  volumes:
+    - ./data:/docker-entrypoint-initdb.d
+
+egeya:
+   build: .
+   environment:
+     - VIRTUAL_HOST=egeya.dev
+   links:
+     - db
+   volumes:
+     - ./themes:/var/www/html/themes
+     - ./pictures:/var/www/html/pictures

@@ -1,0 +1,25 @@
+.e2-message {
+  font-size: 15px;
+  border-radius: 3px;
+  padding: 12px;
+  margin-bottom: 24px;
+  background: #f0d040;
+  color: #d04000;
+}
+
+.e2-message+.e2-message {
+  margin-top: -16px;
+}
+
+.e2-message-info {
+  background: #0040cc;
+  color: #fff;
+  * { color: #fff }
+}
+
+.e2-message-serious {
+  background: #e05030;
+  color: #fff;
+  * { color: #fff }
+}
+

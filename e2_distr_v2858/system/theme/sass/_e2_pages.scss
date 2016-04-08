@@ -1,0 +1,16 @@
+.e2-pages-prev,
+.e2-pages-between,
+.e2-pages-next {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.e2-pages-prev,
+.e2-pages-next {
+  max-width: 40%;
+}
+
+.e2-pages-between {
+  padding: 0 1em;
+  white-space: nowrap;
+}

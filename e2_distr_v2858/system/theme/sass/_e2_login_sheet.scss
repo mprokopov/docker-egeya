@@ -1,0 +1,66 @@
+.e2-login-sheet {
+  position: fixed;
+  z-index: 998;
+  left: 50%;
+  top: 30%;
+  visibility: hidden;
+  opacity: 0;
+  @include transition-property(opacity);
+  @include transition-duration(.25s);
+  @include transition-timing-function(ease-out);
+}
+
+.e2-show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.e2-login-sheet-guts {
+
+  position: relative;
+  z-index: 999;
+  top: -10px;
+  margin: 0 -240px;
+  width: 480px;
+  background: #fff;
+  padding: 30px 0;
+  border-radius: 6px;
+  -webkit-transform: scale(.7);
+  opacity: 0;
+  transition: all .25s ease-out;
+  /*
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .1);
+  */
+  
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .sign-in-button {
+    font-size: 13px;
+    padding: 4px 10px;
+  }
+  
+  label {
+    font-size: 13px;
+  }
+ 
+  // hz?? 
+  table {
+    margin: 0;
+  }
+  
+  td {
+    padding: 0;
+  }
+
+}
+
+.e2-show .e2-login-sheet-guts {
+  opacity: 1;
+  -webkit-transform: scale(1);
+}
+

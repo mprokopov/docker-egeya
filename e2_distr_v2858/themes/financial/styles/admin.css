@@ -1,0 +1,20 @@
+.admin-menu-service {
+  background: #faf8f0;
+}
+
+.admin-menu-comments-fadeout {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(250, 248, 240, 0)), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(left, rgba(250, 248, 240, 0), #faf8f0);
+  background-image: -moz-linear-gradient(left, rgba(250, 248, 240, 0), #faf8f0);
+  background-image: -o-linear-gradient(left, rgba(250, 248, 240, 0), #faf8f0);
+  background-image: -ms-linear-gradient(left, rgba(250, 248, 240, 0), #faf8f0);
+  background-image: linear-gradient(left, rgba(250, 248, 240, 0), #faf8f0);
+}
+
+.admin-menu .current {
+  color: #aaa8a0;
+}
+
+.e2-flying-frame {
+  border-color: #206040;
+}
