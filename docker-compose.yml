@@ -11,7 +11,7 @@ services:
 
   egeya:
     build: .
-    image: mprokopov/egeya-apache
+    image: mprokopov/egeya:latest
     environment:
       - VIRTUAL_HOST=egeya.dev
     links:
