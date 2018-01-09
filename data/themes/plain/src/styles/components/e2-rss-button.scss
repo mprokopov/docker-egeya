@@ -1,0 +1,20 @@
+.e2-rss-button, .e2-rss-button:visited {
+  border-radius: 3px;
+  color: var(--foregroundColor);
+  border: 1px solid;
+  border-color: var(--thinRuleColor);
+  padding: 0 2px 1px 3px !important;
+  font-family: var(--smallFontFamily);
+  font-size: 12px;
+  line-height: 12px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  top: -1px;
+}
+
+.e2-rss-button:hover, .e2-rss-button.hover {
+  color: var(--hoverColor);
+  border-color: var(--hoverUnderlineColor);
+}

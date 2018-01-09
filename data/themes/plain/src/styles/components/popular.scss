@@ -1,0 +1,31 @@
+.e2-popular {
+  max-width: 700px;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  margin: 0 0 24px 0;
+}
+
+.e2-popular p {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 0 6px 0;
+}
+
+.e2-popular a {
+  padding-top: 4px;
+}
+
+@media #{$ArePopularVertical} {
+  .e2-popular {
+    max-width: none;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+  }
+}
+

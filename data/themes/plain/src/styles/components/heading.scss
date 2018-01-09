@@ -1,0 +1,61 @@
+.e2-heading {
+  margin-bottom: 40px;
+}
+
+.e2-heading h2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--headingsColor);
+}
+
+.e2-heading input {
+  font-size: 15px;
+}
+
+.e2-heading-super {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.e2-heading-see-also {
+  margin-top: 10px;
+}
+
+.e2-heading-description {
+  margin: 40px 0 40px;
+}
+
+.e2-year-months,
+.e2-month-days {
+  font-family: var(--smallFontFamily);
+  font-size: 12px;
+  line-height: 24px;
+  margin: 12px -4px 0;
+}
+
+.e2-year-month,
+.e2-month-day {
+  padding: 4px;
+}
+
+.e2-month-day-current {
+  background: var(--currentItemBackgroundColor);
+  border-radius: 3px;
+}
+
+.e2-period-unavailable {
+  color: var(--disabledColor);
+}
+
+.e2-section-heading {
+  color: var(--headingsColor);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+

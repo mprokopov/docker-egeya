@@ -1,4 +1,4 @@
 /pictures/**
 /themes/**
-/data/**
+.DS_Store
 

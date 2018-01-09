@@ -1,0 +1,106 @@
+// .nu // links that should not be underlined
+// .hover // simulated hover
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol, li,
+pre,
+table, thead, tbody, tr, th, td,
+img, pre, tt, code,
+form, input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-indent: 0;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: baseline;
+}
+
+
+body {
+  background: var(--backgroundColor);
+  color: var(--foregroundColor);
+  margin: 0;
+  padding: 0;
+}
+
+body, input, textarea, select, button {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--mainFontFamily);
+}
+
+pre, tt, code, pre *, tt *, code * {
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+pre, code {
+  white-space: pre-wrap;
+}
+
+sup, sub {
+  position: relative;
+  vertical-align: middle;
+  font-size: 75%;
+  font-weight: normal;
+}
+
+sup { bottom: 0.5em; }
+
+sub { top: 0.5em; }
+
+mark {
+  display: inline;
+  background: var(--markedTextBackground);
+  color: inherit;
+}
+
+mark img {
+  box-shadow: 0 0 0 4px var(--markedImageBorderColor);
+}
+
+img {
+  border: 0;
+}
+
+table {
+  empty-cells: show;
+  border-spacing: 0;
+  border-collapse: collapse;  
+}
+
+table, thead, tbody, tr, th, td {
+  text-align: left;
+  vertical-align: baseline;
+}
+
+a {
+  color: var(--linkColor);
+  border-color: var(--linkUnderlineColor);
+  transition-property: (border-bottom, border-color, background, color, fill);
+  transition-duration: var(--time);
+  transition-timing-function: ease-out;
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+a:visited {
+  color: var(--linkColorVisited);
+  border-color: var(--linkUnderlineColorVisited);
+}
+
+a:hover,
+a.hover {
+  color: var(--hoverColor);
+  border-color: var(--hoverUnderlineColor);
+  transition: none;
+}

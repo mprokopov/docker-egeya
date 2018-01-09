@@ -1,0 +1,103 @@
+$thin: 0.85;
+$backgroundColor: #fff;
+$foregroundColor: #000;
+$headingsColor: #000;
+$linkColor: #0060a0;
+$linkColorVisited: #70a0b0;
+$tagColor: #556677;
+$hoverColor: #b03000;
+$engineTextColor: #a0a0a0;
+$adminColor: #009030;
+
+$AreCommentsVertical: 'screen and (max-width: 735px)';
+$ArePopularVertical: 'screen and (max-width: 735px)';
+$AreFormsVertical: 'screen and (max-width: 735px)';
+$IsSearchHeadingFullWidth: 'screen and (max-width: 735px)';
+$AreWindowsFullWidth: 'screen and (max-width: 735px)';
+
+$AreFormControlsFullWidth: 'screen and (max-width: 1023px)';
+$AreTextIndentsProportional: 'screen and (max-width: 1023px)';
+$DoTextObjectsNeedOverflowScroll: 'screen and (max-width: 1023px)';
+$DoIconsHaveExtraMargin: 'screen and (max-width: 1023px)';
+$IsCompact: 'screen and (max-width: 1023px)';
+
+:root {
+
+  --backgroundColor: $backgroundColor;
+  --backgroundTransparentColor: transparentize($backgroundColor, 0.2);
+  --sheetBackgroundColor: rgba(240,240,240,0.8);
+
+  --foregroundColor: $foregroundColor;
+  --thinRuleColor: transparentize($foregroundColor, $thin);
+
+  --headingsColor: $headingsColor;
+  --headingsUnderlineColor: transparentize($headingsColor, $thin);
+  --linkColor: $linkColor;
+  --linkUnderlineColor: transparentize($linkColor, $thin);
+  --linkColorVisited: $linkColorVisited;
+  --linkUnderlineColorVisited: transparentize($linkColorVisited, $thin);
+  --hoverColor: $hoverColor;
+  --hoverUnderlineColor: transparentize($hoverColor, $thin);
+  --tagColor: $tagColor;
+  --tagUnderlineColor: transparentize($tagColor, $thin);
+  --adminColor: $adminColor;
+  --adminUnderlineColor: transparentize($adminColor, $thin);
+  --engineTextColor: $engineTextColor;
+  --engineTextUnderlineColor: transparentize($engineTextColor, $thin);
+
+  --markedTextBackground: #fffada;
+  --markedImageBorderColor: #fff8b8;
+
+  --inputBackgroundColor: #f0f0f0;
+  --inputTextColor: #000;
+
+  --imageBorderColor: #e8e8e8;
+  --disabledColor: #cccccc;
+  --errorColor: #b03000;
+  --currentItemBackgroundColor: #e8e8e8;
+  --windowBackgroundColor: #fff;
+  --unsavedIndicatorColor: #b03000;
+
+  // to match .likely
+  --subscribeButtonBackground: rgba(231,231,231,.8);
+  --subscribeButtonHoverBackground: rgba(212,212,212,.8);
+  --subscribeButtonTextColor: #000;
+
+  // to match .likely-light
+  /* --subscribeButtonBackground: rgba(236,236,236,.16); */
+  /* --subscribeButtonHoverBackground: rgba(255,255,255,.48); */
+  /* --subscribeButtonTextColor: #fff; */
+
+  --marginTop: 48px;
+  --marginLeft: 9%;
+  --marginRight: 9%;
+  --marginTopCompact: 16px;
+  --marginLeftCompact: 4%;
+  --marginRightCompact: 4%;
+
+  --displayLogoMarginal: block;
+  --displayLogo: none;
+  --displayLogoCompact: block;
+
+  --columnSpacing: 15px;
+
+  --logoTop: -20px;
+  --logoSize: 40px;
+  --blogTitleFontSize: 16px;
+  --blogTitleLineHeight: 24px;
+  --pageHeadingFontSize: 36px;
+  --pageHeadingLineHeight: 42px;
+  --noteTitleFontSize: 20px;
+  --noteTitleLineHeight: 26px;
+  --noteTitleFavouriteFontSize: 36px;
+  --noteTitleFavouriteLineHeight: 40px;
+  --noteTextFontSize: 16px;
+  --noteTextLineHeight: 24px;
+
+  --mainFontFamily: system-ui, -apple-system, BlinkMacSystemFont, "SF UI Text", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --noteMainFontFamily: inherit;
+  --smallFontFamily: inherit;
+
+  --time: .2s;
+
+}

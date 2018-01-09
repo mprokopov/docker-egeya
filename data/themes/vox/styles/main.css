@@ -1,0 +1,104 @@
+:root {
+    
+  --backgroundColor:             rgb( 241, 243, 242      );
+  --backgroundTransparentColor: rgba( 241, 243, 242, .8  );
+  --sheetBackgroundColor:       rgba( 227, 224, 211, .8  );
+
+  --foregroundColor:             rgb(  76,  78,  77      );
+  --thinRuleColor:              rgba(  76,  78,  77, .3  );
+
+  --headingsColor:               rgb(  76,  78,  77      );
+  --headingsUnderlineColor:     rgba(  76,  78,  77, .3  );
+  --linkColor:                   rgb(  79, 113, 119      );
+  --linkUnderlineColor:         rgba(  79, 113, 119, .3  );
+  --linkColorVisited:            rgb( 103, 105, 104      );
+  --linkUnderlineColorVisited:  rgba( 103, 105, 104, .3  );
+  --hoverColor:                  rgb( 135,  23,  25      );
+  --hoverUnderlineColor:        rgba( 135,  23,  25, .3  );
+  /* --tagColor */
+  /* --tagUnderlineColor */
+  /* --adminColor */
+  /* --adminUnderlineColor */
+  --engineTextColor:             rgb(  86,  85, 103      );
+  --engineTextUnderlineColor:   rgba(  86,  85, 103, .3 );
+
+  --markedTextBackground:        rgb( 255, 242,   0);
+  --markedImageBorderColor:      rgb( 255, 242,   0);
+
+  --inputBackgroundColor:        rgb( 255, 255, 255);
+  --inputTextColor:               black;
+
+  /* --imageBorderColor */
+  /* --disabledColor */
+  /* --errorColor */
+  /* --currentItemBackgroundColor */
+  /* --windowBackgroundColor */
+  /* --unsavedIndicatorColor */
+  
+  /* to match .likely */
+  /* --subscribeButtonBackground: rgba(231,231,231,.8); */
+  /* --subscribeButtonHoverBackground: rgba(212,212,212,.8); */
+  /* --subscribeButtonTextColor: #000; */
+
+  /* to match .likely-light */
+  /* --subscribeButtonBackground: rgba(236,236,236,.16); */
+  /* --subscribeButtonHoverBackground: rgba(255,255,255,.48); */
+  /* --subscribeButtonTextColor: #fff; */
+  
+  --marginTop: 48px;
+  --marginLeft: 6%;
+  --marginRight: 6%;
+  --marginTopCompact: 14px;
+  --marginLeftCompact: 3%;
+  --marginRightCompact: 3%;
+
+  --displayLogoMarginal: none;
+  --displayLogo: block;
+  --displayLogoCompact: block;
+
+  /* --columnSpacing */
+
+  --logoTop: -8px;
+  --blogTitleFontSize: 28px;
+  --blogTitleLineHeight: 32px;
+  --pageHeadingFontSize: 36px;
+  --pageHeadingLineHeight: 42px;
+  --noteTitleFontSize: 28px;
+  --noteTitleLineHeight: 32px;
+  --noteTitleFavouriteFontSize: 40px;
+  --noteTitleFavouriteLineHeight: 48px;
+  --noteTextFontSize: 20px;
+  --noteTextLineHeight: 28px;
+
+  --mainFontFamily: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --noteMainFontFamily: Georgia, serif;
+  /* --smallFontFamily */
+
+  /* --time */
+
+}
+
+.e2-text .lead {
+  font-family: var(--mainFontFamily);
+  font-size: var(--noteTextFontSize);
+  line-height: var(--noteTextLineHeight);
+  margin: 0 0 28px;
+}
+
+.e2-note-favourite .e2-text .lead {
+  font-size: var(--noteTitleFontSize);
+  line-height: var(--noteTitleLineHeight);
+}
+
+.e2-text .loud {
+  background-color: #fff200;
+  font-family: var(--mainFontFamily);
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 44px;
+  max-width: 720px;  
+  padding: .4em 0 .8em;
+  border: none;
+  box-shadow: -0.4em 0 0 #fff200, 0.4em 0 0 #fff200;  
+  margin: 20px 0 40px;
+}

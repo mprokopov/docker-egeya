@@ -1,0 +1,38 @@
+.e2-template-preview-image {
+  text-align: left;
+  position: relative;
+  width: 100px;
+  height: 120px;
+  padding: 16px 0;
+  outline: 1px var(--thinRuleColor) solid;
+}
+
+.e2-template-preview-image-heading {
+  margin: 0 0 8px 8px;
+  height: 6px;
+  width: 60px;
+  background: currentColor;
+}
+
+.e2-template-preview-image-text {
+  margin: 0 0 12px 0;
+}
+
+.e2-template-preview-image-text-line {
+  margin: 0 0 6px 8px;
+  height: 1px;
+  width: 70px;
+  background: currentColor;
+}
+
+.e2-template-preview-image-text-line:last-child {
+  width: 50px;
+}
+
+.e2-template-preview-image-link {
+  margin: 0 0 6px 8px;
+  height: 2px;
+  width: 40px;
+  background: currentColor;
+}
+

@@ -1,0 +1,122 @@
+.e2-unsaved-led {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--unsavedIndicatorColor);
+}
+
+.admin-menu {
+  position: relative;
+  height: 32px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--disabledColor);
+}
+
+.admin-icon {
+  position: relative;
+  margin: 0 4px;
+}
+
+@media #{$DoIconsHaveExtraMargin} {
+  .admin-icon {
+    margin: 0 8px;
+  }
+}
+
+.e2-admin-menu-item-frame {
+  border: var(--adminColor) 1px solid;
+  border-radius: 4px;
+}
+
+.e2-admin-link + .e2-unsaved-led {
+  margin-left: .1em;
+  vertical-align: .2em;
+}
+
+.e2-notes-unsaved p .e2-admin-link + .e2-unsaved-led {
+  margin-left: .3em;
+}
+
+.admin-icon .e2-unsaved-led {
+  position: absolute;
+  right: -4px;
+  top: -3px;
+}
+
+.admin-links-sticky .e2-unsaved-led {
+  right: 7px;
+  top: -5px;
+}
+
+.admin-icon span > .e2-svgi > .e2-unsaved-led {
+  opacity: 0;
+}
+
+.admin-links-floating {
+  float: right;
+  white-space: nowrap;
+  margin-left: 16px;
+  
+  + .search-field {
+    margin-left: 16px;
+  }
+}
+
+.admin-links-sticky {
+  position: sticky;
+  top: 48px;
+}
+
+.admin-links a {
+  color: var(--adminColor);
+  border-color: var(--adminUnderlineColor);
+}
+
+.admin-links a.delete { color: #933; border-color: transparentize(#933, $thin) }
+
+.admin-links a.dashed,
+.admin-links a.dashed:visited {
+  color: var(--adminColor);
+  border-color: var(--adminUnderlineColor);
+}
+
+.admin-links a:hover,
+.admin-links a.hover {
+  color: var(--hoverColor);
+  border-color: var(--hoverUnderlineColor);
+}
+
+.e2-admin-link,
+.e2-admin-link:visited {
+  color: var(--adminColor);
+  border-color: var(--adminUnderlineColor);
+}
+
+.e2-admin-link:hover,
+.e2-admin-link.hover {
+  color: var(--hoverColor);
+  border-color: var(--hoverUnderlineColor);
+}
+
+a.admin-menu-comments-count {
+  background: var(--adminColor);
+  min-width: 17px;
+  height: 17px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+}
+
+a.admin-menu-comments-count:hover,
+a.admin-menu-comments-count.hover {
+  background: var(--hoverColor);
+  color: #fff;
+}

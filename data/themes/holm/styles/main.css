@@ -1,0 +1,91 @@
+:root {
+      
+  --backgroundColor:             rgb(  36,  35,  34      );
+  --backgroundTransparentColor: rgba(  36,  35,  34, .8  );
+  --sheetBackgroundColor:       rgba(  36,  35,  34, .8  );
+  
+  --foregroundColor:             rgb( 137, 136, 135      );
+  --thinRuleColor:              rgba( 137, 136, 135, .25 );
+  
+  --headingsColor:               rgb( 255, 255, 255      );
+  --headingsUnderlineColor:     rgba( 255, 255, 255, .25 );
+  --linkColor:                   rgb( 240, 106,  33      );
+  --linkUnderlineColor:         rgba( 240, 106,  33, .25 );
+  --linkColorVisited:           rgba( 240, 106,  33, .5  );
+  --linkUnderlineColorVisited:  rgba( 240, 106,  33, .12 );
+  --hoverColor:                  rgb( 238, 218,  35      );
+  --hoverUnderlineColor:        rgba( 238, 218,  35, .25 );
+  /* --tagColor */
+  /* --tagUnderlineColor  */
+  --adminColor:                  rgb(  64, 176,  96      );
+  --adminUnderlineColor:        rgba(  64, 176,  96, .25 );
+  --engineTextColor:             rgb(  87,  86,  85      );
+  --engineTextUnderlineColor:   rgba(  87,  86,  85, .25 );
+ 
+  --markedTextBackground:           #554433;
+  --markedImageBorderColor:         #997755;
+
+  --inputBackgroundColor:           #0040cc;
+  --inputTextColor:                 #fff;
+
+  --imageBorderColor:               #333;
+  --disabledColor:               rgb(  87,  86,  85      );
+  --errorColor:                     #b03000;
+  --currentItemBackgroundColor:     #333;
+  --windowBackgroundColor:         var(--inputBackgroundColor);
+  /* --unsavedIndicatorColor */
+
+  /* to match .likely */
+  /* --subscribeButtonBackground: rgba(231,231,231,.8); */
+  /* --subscribeButtonHoverBackground: rgba(212,212,212,.8); */
+  /* --subscribeButtonTextColor: #000; */
+
+  /* to match .likely-light */
+  --subscribeButtonBackground: rgba(236,236,236,.16);
+  --subscribeButtonHoverBackground: rgba(255,255,255,.48);
+  --subscribeButtonTextColor: #fff;
+
+  --marginTop: 48px;
+  --marginLeft: 3%;
+  --marginRight: 3%;
+  --marginTopCompact: 14px;
+  --marginLeftCompact: 3%;
+  --marginRightCompact: 3%;
+
+  --displayLogoMarginal: none;
+  --displayLogo: block;
+  --displayLogoCompact: block;
+
+  --columnSpacing: 20px;
+  
+  --logoTop: -8px;
+  --blogTitleFontSize: 40px;
+  --blogTitleLineHeight: 48px;
+  --pageHeadingFontSize: 36px;
+  --pageHeadingLineHeight: 42px;
+  --noteTitleFontSize: 28px;
+  --noteTitleLineHeight: 32px;
+  --noteTitleFavouriteFontSize: 40px;
+  --noteTitleFavouriteLineHeight: 48px;
+  --noteTextFontSize: 20px;
+  --noteTextLineHeight: 28px;
+
+  --mainFontFamily: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --noteMainFontFamily: "Georgia", serif;
+  /* --smallFontFamily */
+
+  /* --time */
+
+}
+
+.e2-text .lead {
+  font-family: var(--mainFontFamily);
+}
+  
+.e2-text .loud {
+  color: var(--headingsColor);
+  font-family: var(--mainFontFamily);
+  border: none;
+  padding: .4em 0.4em .8em;
+  background: var(--windowBackgroundColor);
+}

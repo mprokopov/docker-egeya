@@ -1,0 +1,6 @@
+.e2-select {
+  cursor: pointer;
+  padding-right: 19px;
+  color: var(--inputTextColor);
+  background: var(--inputBackgroundColor) url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="19" height="8" viewBox="0 0 19 8"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.743 1.922L9.5 6.164 5.257 1.922 4.8 2.38l4.7 4.698 4.7-4.7z" style="fill: ' + var(--inputTextColor) + '"/></svg>') right center no-repeat;
+}

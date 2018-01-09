@@ -1,0 +1,161 @@
+.form {
+  width: 100%;
+}
+
+.form-part,
+.form-control,
+.form-subcontrol {
+  float: left;
+  width: 100%;
+}
+
+.form:after {
+  content: ' ';
+  clear: both;
+}
+
+.form-part,
+.form-control,
+.form-subcontrol {
+  clear: left;
+}
+
+.form-label {
+  clear: left;
+  float: left;
+  width: 17.07%;
+  padding: 0 20px 0 0;
+  line-height: 18px;
+  margin-top: 2px;
+}
+
+.form-label-sticky {
+  position: sticky;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: var(--backgroundColor);
+  top: 6px;
+}
+
+.form-element {
+  margin-left: 17.07%;
+  width: 82.93%;
+}
+
+.form-control-sublabel {
+  margin: 0 0 8px;
+  width: 82.93%;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.form-part { width: 100%; margin: 0 0 24px 0 }
+
+.form-control { width: 100%; margin: 0 0 12px 0  }
+
+.form-label p { margin: 0 0 8px }
+
+.form-control .input-label { margin-top: 8px }
+.form-control .input-error { background: #ffece0 }
+
+.form-control input,
+.form-control label,
+.form-control select,
+.form-control textarea { margin-bottom: 8px }
+.form-control .disabled { color: #999; }
+
+.form-control-big .input-label { margin-top: 16px }
+.form-control-big input[type="text"] { font-size: 24px; margin-bottom: 8px }
+
+.form-subcontrol { width: 100%; margin: 0 0 8px 0 }
+.form-subcontrol-master { margin: 0 0 0 0 }
+.form-subcontrol-slave { margin: 0 0 0 16px }
+
+.form-control .full-width { width: 100%; }
+.form-control .width-4 { width: 80%; }
+.form-control .width-3 { width: 60%; }
+.form-control .width-2 { width: 40%; }
+.form-control .width-1 { width: 20%; }
+
+.form-control .icon {
+  position: relative;
+  left: -.33em;
+  width: 0;
+}
+
+.form-control .icon span.e2-svgi {
+  position: absolute;
+  right: 0;
+  top: 6px;
+}
+
+.form-label-saveinfo {
+  font-family: var(--smallFontFamily);
+  font-size: 12px;
+  line-height: 16px;
+  margin: 4px 0 0;
+}
+
+.delete-box {
+  border-radius: 6px;  
+  background: #ec6040;
+  padding: 20px 0 40px 0;
+  color: #fff;
+}
+
+@media #{$AreFormsVertical} {
+  .form-control .form-label {
+    width: 100%;
+    padding: 0 0 6px 0;
+    vertical-align: baseline;
+    margin: 0;
+  }
+
+  .form-control .input-label {
+    margin: 0;
+  }
+
+  .form-control .form-label-sticky {
+    background: var(--backgroundTransparentColor);
+    -webkit-backdrop-filter: blur(8px);
+    margin-top: -6px;
+    padding-top: 6px;
+    top: 0;
+  }
+
+  .form-label label {
+    font-weight: bold;
+  }
+
+  .form-label-saveinfo {
+    float: right;
+    display: inline-block;
+    margin: 0 0 0 1em;
+    vertical-align: baseline;
+  }
+
+  .form-element,
+  .form-control-sublabel {
+    width: 100%;
+    margin-left: 0px;
+  }
+  
+  .delete-box {
+    width: 100%;
+    padding: 20px 4% 40px;
+  }
+
+  .width-2, .width-3, .width-4 {
+    width: 100% !important;
+  }
+
+}
+
+@media #{$AreFormControlsFullWidth} {
+  .e2-smart-title {
+    width: 100% !important;
+  }
+
+  #blog-title, .width-2, .width-3, .width-4 {
+    width: 100% !important;
+  }
+}

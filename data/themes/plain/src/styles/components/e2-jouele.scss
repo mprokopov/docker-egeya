@@ -1,0 +1,72 @@
+.jouele {
+  font-family: var(--smallFontFamily) !important;
+  font-size: 15px !important;
+  line-height: 24px !important;
+  max-width: none !important;
+}
+
+.jouele {
+
+  .jouele-control {
+    cursor: pointer;
+  }
+
+  .jouele-control.jouele-is-unavailable {
+    cursor: default;
+    opacity: .2;
+    filter: grayscale(100%);
+  }
+
+  .jouele-progress-line-bar_base:after,
+  .jouele-progress-line-bar_load:after {
+    background-color: var(--thinRuleColor);
+  }
+  .jouele-progress-line-bar_play:after {
+    background-color: currentColor;
+  }
+  .jouele-skin-dark.jouele-status-playing .jouele-progress-line-bar_play:after,
+  .jouele-status-playing .jouele-progress-line-bar_play:after {
+    background-color: var(--linkColor);
+  }
+  .jouele-progress-line:hover .jouele-progress-line-bar_play:after {
+    background-color: var(--hoverColor);
+  }
+  .jouele-progress-line-lift {
+    background-color: currentColor;
+  }
+  .jouele-skin-dark.jouele-status-playing .jouele-progress-line-lift,
+  .jouele-status-playing .jouele-progress-line-lift {
+    background-color: var(--linkColor);
+  }
+  .jouele-progress-line:hover .jouele-progress-line-lift {
+    background-color: var(--hoverColor);
+  }
+  .jouele-progress-line-lift:before {
+    border-color: currentColor;
+  }
+  .jouele-skin-dark.jouele-status-playing .jouele-progress-line-lift:before,
+  .jouele-status-playing .jouele-progress-line-lift:before {
+    border-color: var(--linkColor);
+  }
+  .jouele-progress-line:hover .jouele-progress-line-lift:before {
+    border-color: var(--hoverColor);
+  }
+  .jouele-info-control-button-icon_unavailable .jouele-svg-color,
+  .jouele-info-control-button-icon_play .jouele-svg-color {
+    fill: var(--foregroundColor);
+    stroke: none;
+  }
+  .jouele-info-control-button-icon_pause .jouele-svg-color {
+    fill: var(--linkColor);
+    stroke: none;
+  }
+  .jouele-info-control-button:hover .jouele-info-control-button-icon_play .jouele-svg-color,
+  .jouele-info-control-button:hover .jouele-info-control-button-icon_pause .jouele-svg-color {
+    fill: var(--hoverColor);
+    stroke: none;
+  }
+  .jouele-info-time {
+    color: inherit;
+  }
+
+}

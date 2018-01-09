@@ -1,0 +1,145 @@
+.e2-note,
+.e2-note-list {
+  margin: 0 0 60px;
+}
+
+.e2-note h1 {
+  transition-property: (font-size, line-height);
+  transition-duration: var(--time);
+  transition-timing-function: ease-out;
+  color: var(--headingsColor);
+  font-size: var(--noteTitleFontSize);
+  line-height: var(--noteTitleLineHeight);
+  font-weight: bold;
+  max-width: 720px;
+  margin: 0 0 8px;
+  padding-right: 25px;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.e2-note h1 a,
+.e2-note h1 a:visited {
+  color: var(--headingsColor);
+  border-color: var(--headingsUnderlineColor);
+}
+
+.e2-note h1 a:hover,
+.e2-note h1 a.hover {
+  color: var(--hoverColor);
+  border-color: var(--hoverUnderlineColor);
+}
+
+.e2-draft-label {
+  display: inline-block;
+  font-family: var(--smallFontFamily);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: normal;
+  border-radius: 3px;
+  background: #706858;
+  color: #fff;
+  padding: 1px 5px;
+  position: relative;
+  top: -2px;
+}
+
+.e2-note-favourite h1 {
+  font-size: var(--noteTitleFavouriteFontSize);
+  line-height: var(--noteTitleFavouriteLineHeight);
+}
+
+.e2-note-favourite .favourite {
+  position: relative;
+}
+
+.e2-note-favourite .favourite:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  bottom: 11px;
+  right: -26px;
+  width: 28px;
+  height: 16px;
+  background-image: url('../../../system/theme/images/favourite-on.svg');
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.e2-note .admin-links-floating {
+  margin-top: -3px;
+  z-index: 100;
+  transition-property: (margin-top);
+  transition-duration: .25s;
+  transition-timing-function: ease-out;
+  background: var(--backgroundColor);
+  padding: 5px 0 5px 8px;
+  border-radius: 30px 0 0 30px;
+}
+
+.e2-note-author-picture img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px; 
+}
+
+.e2-note-author-name {
+  font-size: var(--noteTextFontSize);
+  line-height: var(--noteTextLineHeight);
+  font-weight: bold;
+  margin: 0 0 4px 0;
+}
+
+.e2-note-text {
+  font-size: var(--noteTextFontSize);
+  line-height: var(--noteTextLineHeight);
+  margin: 0 0 16px 0;
+}
+
+.e2-note-text p,
+.e2-note-text ul,
+.e2-note-text ol,
+.e2-note-text li,
+.e2-note-text blockquote,
+.e2-note-text .e2-text-calliope-formatted {
+  font-family: var(--noteMainFontFamily);
+}
+
+.e2-note-likes {
+  font-size: 0;
+  margin: 0 0 10px 0;
+}
+
+.e2-note-subscribe-button,
+.e2-note-subscribe-button:visited {
+  display: none;
+  background: var(--subscribeButtonBackground);
+  color: var(--subscribeButtonTextColor);
+  transition: background var(--time) ease-out, color var(--time) ease-out, fill var(--time) ease-out;
+  line-height: 20px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 0;
+  height: 22px;
+  margin: 0 10px 10px 0;
+  vertical-align: top;
+  padding: 1px 8px;
+}
+
+.e2-note-subscribe-button:hover,
+.e2-note-subscribe-button.hover {
+  background: var(--subscribeButtonHoverBackground);
+  color: var(--subscribeButtonTextColor);
+}
+
+.e2-note-subscribe-button-visible {
+  display: inline-block;
+}
+
+.e2-note-tags,
+.e2-note-comments-link {
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: var(--smallFontFamily);
+}

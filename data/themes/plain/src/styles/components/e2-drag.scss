@@ -1,0 +1,82 @@
+// userpic
+.e2-user-picture-container {
+  display: inline-block;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+}
+
+.e2-user-picture-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: opacity .25s ease-out, transform .25s ease-out;
+}
+
+.e2-user-picture-container .e2-user-picture-uploading {
+  visibility: hidden;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+
+.e2-user-picture-container-uploading .e2-user-picture-uploading {
+  visibility: visible;
+}
+
+// generic drag-n-drop target
+.e2-external-drop-target-dragover {
+  position: relative;
+  background: rgba(#60a0ff,.2);
+  transition: none;
+}
+
+.e2-external-drop-target-dragover-alt {
+  background: rgba(#a06000,.2);
+}
+
+// body drag-n-drop target
+.e2-external-drop-target-dragover.e2-external-drop-target-body {
+  background: transparent;
+}
+
+.e2-external-drop-target-body.e2-external-drop-target-dragover,
+.e2-external-drop-target-body.e2-external-drop-target-dragover-alt {
+  background: var(--backgroundColor);
+}
+
+.e2-external-drop-target-body:before {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  box-shadow: 0;
+  transition: box-shadow .25s ease-out;  
+  pointer-events: none;
+}
+
+.e2-external-drop-target-body.e2-external-drop-target-dragover:before {
+  box-shadow: inset 0 0 0 8px rgba(#60a0ff,.5);
+  transition: none;
+}
+
+.e2-external-drop-target-body.e2-external-drop-target-dragover-alt:before {
+  box-shadow: inset 0 0 0 8px rgba(#c08040,.5);
+  transition: none;
+}
+
+.e2-external-drop-target-dragover > img,
+.e2-external-drop-target-dragover > a > img,
+.e2-user-picture-container-uploading > img,
+.e2-user-picture-container-uploading > a > img {
+  transition: transform .25s ease-out;
+  opacity: .4; 
+}
+
+.e2-user-picture-container-uploading > img,
+.e2-user-picture-container-uploading > a > img {
+  transform: scale(0.001) rotate(90deg);
+}

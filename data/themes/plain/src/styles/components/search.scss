@@ -1,0 +1,141 @@
+.e2-search {
+  white-space: nowrap;
+}
+
+.e2-search-input .e2-search-input-input {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 3px;
+  width: 0;
+  height: 28px;
+  padding-left: 20px !important;
+  padding-right: 0 !important;
+  background-color: transparent;
+}
+
+.e2-search-input {
+  background-color: transparent;
+}
+
+.e2-search-icon-placeholder {
+  width: 16px;
+  height: 24px;
+}
+
+.e2-search-icon {
+  position: absolute;
+  color: var(--foregroundColor);
+
+  &:hover {
+    color: var(--hoverColor);
+    cursor: pointer;
+  }
+}
+
+.e2-search-icon-focus, .e2-search-icon-focus:hover {
+  cursor: text;
+  color: var(--inputTextColor);
+}
+
+.e2-search-input .e2-search-input-input,
+.e2-search-input .e2-search-input-input:focus {
+  transition-property: (width, padding-left, padding-right, left, right, transform);
+  transition-duration: var(--time);
+  transition-timing-function: ease-out;
+}
+
+.e2-search-input .e2-search-input-input:focus {
+  background-color: var(--inputBackgroundColor);
+  color: var(--inputTextColor);
+  cursor: text;
+  width: 10em;
+  padding-left: 24px !important;
+  padding-right: 4px !important;
+}
+
+.e2-search-results-image {
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  vertical-align: top;
+}
+
+.e2-search-results-image img {
+  display: block;
+}
+
+.e2-search-results-image-dimmed {
+  opacity: .4;
+}
+
+.e2-search-tags {
+  color: var(--disabledColor);
+  margin-left: 12px;
+
+  @media #{$DoIconsHaveExtraMargin} {
+    margin-left: 16px;
+  }
+}
+
+.e2-search-tags a {
+  color: var(--foregroundColor);
+
+  &.hover {
+    color: var(--hoverColor);
+  }
+}
+
+.e2-heading {
+  .e2-search {
+    position: relative;
+  }
+
+  .e2-search form {
+    display: inline-block;
+  }
+
+  .e2-search-input .e2-search-input-input {
+    position: relative;
+  }
+
+  .e2-search-input {
+    top: -2px;
+    position: relative;
+  }
+
+  .e2-search-icon-placeholder {
+    display: none;
+  }
+
+  .e2-search-icon {
+    top: 0;
+    left: 4px;
+    transition-duration: var(--time);
+    transition-timing-function: ease-out;
+    cursor: text;
+    color: var(--inputTextColor);
+
+    &:hover {
+      transition: none;
+    }
+  }
+
+  .e2-search-input .e2-search-input-input,
+  .e2-search-input .e2-search-input-input:focus {
+    cursor: text;
+    width: 600px;
+    height: 36px;
+    padding-left: 24px !important;
+    padding-right: 4px !important;
+    background-color: var(--inputBackgroundColor);
+    transition: none;
+  }
+
+  @media #{$IsSearchHeadingFullWidth} {
+    .e2-search form,
+    .e2-search-input .e2-search-input-input,
+    .e2-search-input .e2-search-input-input:focus {
+      width: 100%;
+    }
+  }
+}

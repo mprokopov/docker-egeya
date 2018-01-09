@@ -1,11 +1,18 @@
 FROM php:5.6-apache
-MAINTAINER kev<noreply@datageek.info>
-
-RUN a2enmod rewrite actions
+MAINTAINER Maskym Prokopov<mprokopov@gmail.com>
 
 RUN apt-get update && apt-get install -y libpng12-dev libjpeg-dev libmcrypt-dev unzip git \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
-    && docker-php-ext-install gd mcrypt mbstring mysql zip
+    && docker-php-ext-install gd mcrypt mbstring mysqli pdo_mysql zip
+    # && docker-php-ext-install gd mcrypt mbstring mysql zip
 
-ADD e2_distr_v2858/ /var/www/html
+RUN a2enmod rewrite actions
+
+ENV VERSION 3254 #2858
+ENV DIST e2_distr_v${VERSION}.zip
+ENV URL https://blogengine.ru/download/${DIST}
+
+RUN curl -O $URL && unzip $DIST -d /var/www/html
+
+EXPOSE 80

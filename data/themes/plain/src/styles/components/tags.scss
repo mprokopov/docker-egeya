@@ -1,0 +1,36 @@
+a.e2-tag,
+a:link.e2-tag,
+a:visited.e2-tag {
+  color: var(--tagColor);
+  border-color: var(--tagUnderlineColor);
+}
+
+a:hover.e2-tag,
+a.hover.e2-tag,
+a:active.e2-tag {
+  color: var(--hoverColor);
+  border-color: var(--hoverUnderlineColor);
+}
+
+.e2-tags {
+  line-height: 2.25em;
+  margin-bottom: 48px;
+}
+
+.e2-tags .e2-tag {
+  margin-right: 8px;
+}
+
+.e2-tag-filter {
+  margin-bottom: 12px;
+}
+
+.e2-tag-filter-slide-shaft,
+.e2-tag-filter-slider span {
+  background: var(--tagColor);
+}
+
+.e2-tag-filter-slide-area:hover .e2-tag-filter-slide-shaft,
+.e2-tag-filter-slide-area:hover .e2-tag-filter-slider span {
+  background: var(--hoverColor);
+}

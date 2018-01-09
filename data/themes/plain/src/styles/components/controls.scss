@@ -1,0 +1,199 @@
+input[type="text"],
+input[type="password"],
+textarea,
+select,
+button,
+.e2-button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  padding: 6px;
+  box-shadow: none;
+  transition-property: background, border-color, box-shadow, fill;
+  transition-duration: .33s;
+  transition-timing-function: ease-out;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  vertical-align: baseline;
+  border: none;
+  background: var(--inputBackgroundColor);
+  color: var(--inputTextColor);
+  border-radius: 4px;
+}
+
+select {
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  margin: 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus,
+button:focus,
+.e2-button:focus {
+  transition: none;
+}
+
+select > button,
+select > .e2-button {
+  display: none;
+}
+
+button,
+.e2-button {
+
+  display: inline-block;
+  padding: 6px 12px;
+  background: #eae4d8;
+  background: linear-gradient(to bottom, #f4f0e8 0%, #e0d8c8 100%);
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  cursor: hand;
+  cursor: pointer;
+  border-radius: 4px;  
+  color: #000;
+
+  &:visited, &:active, &:hover, &.hover {
+    color: #000;
+  }
+
+}
+
+.e2-submit-button,
+.e2-delete-button {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 24px;
+  font-weight: bold;
+}
+
+.e2-submit-button {
+  background: #ec6040;
+  background: linear-gradient(to bottom, #f88040 0%, #e04040 100%);
+  color: #fff;
+
+  &:visited, &:active, &:hover, &.hover {
+    color: #fff;
+  }
+
+}
+
+.e2-delete-button {
+  background: #eaded8;
+  background: linear-gradient(to bottom, #f4ece8 0%, #e0d0c8 100%);
+  color: #000;
+
+  &:visited, &:active, &:hover, &.hover {
+    color: #000;
+  }
+
+}
+
+button:disabled,
+.e2-button:disabled {
+  // background: #e0e0e0;
+  // background: linear-gradient(to bottom, #e8e8e8 0%, #d8d8d8 100%);
+  color: rgba(#000, .2);
+  cursor: default;
+  pointer-events: none;
+}
+
+button:active
+.e2-button:active,
+button:hover,
+.e2-button:hover,
+button.hover,
+.e2-button.hover {
+  box-shadow: inset 0 0 100px rgba(#000,.16);
+}
+
+button:hover,
+.e2-button:hover,
+button.hover,
+.e2-button.hover {
+  transition: none;
+}
+
+button:focus,
+.e2-button:focus {
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
+}
+
+button:focus:hover,
+.e2-button:focus:hover,
+button:focus.hover,
+.e2-button:focus.hover {
+  box-shadow: inset 0 0 100px rgba(#000,.16), inset 0 0 0 1px rgba(0,0,0,.2);
+}
+
+.e2-keyboard-shortcut {
+  padding: 0 .5em;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: var(--smallFontFamily);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+button+.e2-keyboard-shortcut,
+.e2-button+.e2-keyboard-shortcut {
+  margin-left: .67em;
+  font-weight: normal;
+}
+
+.e2-keyboard-shortcut:empty {
+  display: none;
+}
+
+.e2-clickable-keyboard-shortcut {
+  opacity: 1;
+  padding-left: 0;
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: inherit;
+  border-bottom-style: dashed;
+  color: var(--adminColor);
+  border-color: var(--linkUnderlineColor);
+  transition-property: (border-bottom, border-color, background, color, fill);
+  transition-duration: var(--time);
+  transition-timing-function: ease-out;
+}
+
+.e2-clickable-keyboard-shortcut:hover,
+.e2-clickable-keyboard-shortcut.hover {
+  color: var(--hoverColor);
+  border-color: var(--hoverUnderlineColor);
+  transition: none;
+}
+
+.e2-clickable-keyboard-shortcut {
+  cursor: pointer;
+}
+
+.e2-pseudolink {
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+}
+
+// adjust system colors to match the theme
+.e2-upload-error { color: var(--errorColor) }
+
+.e2-visual-login {
+  display: inline-block;
+  margin: 4px 0;
+}

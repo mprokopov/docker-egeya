@@ -1,0 +1,79 @@
+:root {
+
+  --backgroundColor:             rgb(  39,  38,  55      );
+  --backgroundTransparentColor: rgba(  39,  38,  55, .8  );
+  --sheetBackgroundColor:       rgba(  39,  38,  55, .8  );
+  
+  --foregroundColor:             rgb( 204, 180, 160      );
+  --thinRuleColor:              rgba( 204, 180, 160, .25 );
+  
+  --headingsColor:               rgb( 198,  52,  63      );
+  --headingsUnderlineColor:     rgba( 198,  52,  63, .5  );
+  --linkColor:                   rgb( 249, 180, 156      );
+  --linkUnderlineColor:         rgba( 249, 180, 156, .25 );
+  --linkColorVisited:            rgb( 226, 180, 158      );
+  --linkUnderlineColorVisited:  rgba( 226, 180, 158, .25 );
+  --tagColor:                      var(--linkColor);
+  --tagUnderlineColor:             var(--linkUnderlineColor);
+  --hoverColor:                  rgb( 255, 255, 255      );
+  --hoverUnderlineColor:        rgba( 255, 255, 255, .25 );
+  --adminColor:                  rgb( 151, 192, 137      );
+  --adminUnderlineColor:        rgba( 151, 192, 137, .25 );
+  --engineTextColor:             rgb(  86,  85, 103      );
+  --engineTextUnderlineColor:   rgba(  86,  85, 103, .25 );
+
+  --markedTextBackground:           #5e2e3a;
+  --markedImageBorderColor:         #5e2e3a;
+
+  --inputBackgroundColor:           #5e2e3a;
+  --inputTextColor:                var(--foregroundColor);
+
+  --imageBorderColor:             #333;
+  --disabledColor:             rgb(  72,  66,  75      );
+  --errorColor:                   #b03000;
+  --currentItemBackgroundColor:   #333;
+  --windowBackgroundColor:       var(--inputBackgroundColor);
+  /* --unsavedIndicatorColor */
+
+  /* to match .likely */
+  /* --subscribeButtonBackground: rgba(231,231,231,.8); */
+  /* --subscribeButtonHoverBackground: rgba(212,212,212,.8); */
+  /* --subscribeButtonTextColor: #000; */
+
+  /* to match .likely-light */
+  --subscribeButtonBackground: rgba(236,236,236,.16);
+  --subscribeButtonHoverBackground: rgba(255,255,255,.48);
+  --subscribeButtonTextColor: #fff;
+
+  /* --marginTop */
+  /* --marginLeft */
+  /* --marginRight */
+  /* --marginTopCompact */
+  /* --marginLeftCompact */
+  /* --marginRightCompact */
+
+  /* --displayLogoMarginal */
+  /* --displayLogo */
+  /* --displayLogoCompact */
+
+  /* --columnSpacing */
+
+  /* --logoTop */
+  /* --blogTitleFontSize */
+  /* --blogTitleLineHeight */
+  /* --pageHeadingFontSize */
+  /* --pageHeadingLineHeight */
+  /* --noteTitleFontSize */
+  /* --noteTitleLineHeight */
+  /* --noteTitleFavouriteFontSize */
+  /* --noteTitleFavouriteLineHeight */
+  /* --noteTextFontSize */
+  /* --noteTextLineHeight */
+
+  /* --mainFontFamily */
+  /* --noteMainFontFamily */
+  /* --smallFontFamily */
+
+  /* --time */
+
+}

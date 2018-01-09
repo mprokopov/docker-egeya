@@ -1,0 +1,31 @@
+.e2-text .lead {
+  transition-property: (font-size, line-height, margin-bottom);
+  transition-duration: var(--time);
+  transition-timing-function: ease-out;
+  font-size: var(--noteTextFontSize);
+  line-height: var(--noteTextLineHeight);
+  margin: 0 0 20px 0;
+  max-width: 720px;
+}
+
+.e2-note-favourite .e2-text .lead {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.e2-text .loud {
+  font-size: 26px;
+  line-height: 34px;
+  padding: 10px 0 10px 39px;
+  margin: 20px 0 40px;
+  border-left: 1px var(--thinRuleColor) solid;
+  max-width: 720px;
+}
+
+.e2-text .foot {
+  margin: 0 0 10px;
+  font-family: var(--smallFontFamily);
+  font-size: 12px;
+  line-height: 16px;
+}
+

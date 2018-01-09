@@ -1,0 +1,47 @@
+.e2-glass {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  b-ackground: #000608;
+  background: #c0c0c0;
+  z-index: 996; 
+  opacity: .9;
+  transition: all .33s ease-out;
+}
+
+.e2-glass-text {
+  position: fixed;
+  left: 0; top: 200px;
+  width: 100%;
+  z-index: 998; 
+}
+
+.e2-glass-text h1 {
+  line-height: 1.5em;
+  font-weight: normal;
+  margin: 0 0 .75em;
+}
+
+.e2-glass-text p {
+  max-width: none;
+}
+
+.e2-glass-text * {
+  text-align: center;
+  color: #000;
+}
+
+.e2-glass-text a,
+.e2-glass-text a:link,
+.e2-glass-text a:visited {
+  color: #fff;
+  border: 1px solid rgba(#fff,0.15);
+  border-radius: 1.5em;
+  padding: 4px 1em;
+}
+
+.e2-glass-text a:hover {
+  color: #f66
+}
