@@ -14,3 +14,12 @@ Change VERSION in docker-compose.yml to build new Aegea blog engine version and 
     docker-compose up -d
     
 Open http://localhost in browser and proceed with instructions.
+
+
+This docker-compose.yml stores mysql database in persistent volume ./data/mysql, and blog settings stored in 
+
+- ./data/pictures
+- ./data/themes
+- ./data/user
+
+to survive blog data between container recreation.

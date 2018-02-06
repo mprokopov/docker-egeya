@@ -7,13 +7,12 @@ services:
       - MYSQL_DATABASE=egeya
     volumes:
       - ./data/mysql:/var/lib/mysql
-      # - ./data:/docker-entrypoint-initdb.d
 
   egeya:
     build: .
     image: mprokopov/egeya:latest
     environment:
-      - VIRTUAL_HOST=egeya.dev
+      - VIRTUAL_HOST=blog.it-premium.com.ua
     links:
       - db
     ports:
