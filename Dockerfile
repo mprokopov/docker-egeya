@@ -1,11 +1,10 @@
 FROM php:5.6-apache
-MAINTAINER Maskym Prokopov<mprokopov@gmail.com>
+MAINTAINER Maksym Prokopov<mprokopov@gmail.com>
 
 RUN apt-get update && apt-get install -y libpng12-dev libjpeg-dev libmcrypt-dev unzip git \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
     && docker-php-ext-install gd mcrypt mbstring mysqli pdo_mysql zip
-    # && docker-php-ext-install gd mcrypt mbstring mysql zip
 
 RUN a2enmod rewrite actions
 
