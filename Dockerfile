@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libmcrypt-dev un
 
 RUN a2enmod rewrite actions
 
-ENV VERSION 3254
+ENV VERSION 3386
 ENV DIST e2_distr_v${VERSION}.zip
 ENV URL https://blogengine.ru/download/${DIST}
 
