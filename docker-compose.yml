@@ -10,9 +10,10 @@ services:
 
   egeya:
     build: .
-    image: mprokopov/egeya:latest
+    image: mprokopov/egeya:3254-fix
     environment:
       - VIRTUAL_HOST=blog.it-premium.com.ua
+      - DATABASE_URL=mysql2://egeya:egeya@db/egeya
     links:
       - db
     ports:

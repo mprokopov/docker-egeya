@@ -1,17 +1,10 @@
-FROM php:5.6-apache
+FROM mprokopov/egeya:3254
 MAINTAINER Maksym Prokopov<mprokopov@gmail.com>
 
-RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libmcrypt-dev unzip git \
-    && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
-    && docker-php-ext-install gd mcrypt mbstring mysqli pdo_mysql zip
+COPY override_database_settings.php .
+COPY entrypoint.sh /usr/local/bin
 
-RUN a2enmod rewrite actions
-
-ENV VERSION 3386
-ENV DIST e2_distr_v${VERSION}.zip
-ENV URL https://blogengine.ru/download/${DIST}
-
-RUN curl -O $URL && unzip $DIST -d /var/www/html
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+CMD ["apache2-foreground"]
 
 EXPOSE 80

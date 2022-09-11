@@ -3,6 +3,9 @@ Dockerized Aegea blog engine: [RU](https://blogengine.ru) or [EN](http://blogeng
 
 This container plays nicely with https://github.com/jwilder/nginx-proxy nginx docker container.
 
+
+The build addresses fundamental flaw of having DB credentials encrypted in the configuration file and adds workaround to entrypoint to read credentials from DATABASE_URL, encrypt and save to the settings.psa file.
+
 ## Build
 
 Change VERSION in docker-compose.yml to build new Aegea blog engine version and run
