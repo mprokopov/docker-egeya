@@ -1,0 +1,25 @@
+kind: pipeline
+name: build
+steps:
+  - name: docker
+    image: plugins/ecr
+    priveleged: true
+    settings:
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
+      repo: blog_it_premium
+      region: eu-central-1
+      registry: 663084659937.dkr.ecr.eu-central-1.amazonaws.com
+      tags:
+        - latest
+        - ${DRONE_COMMIT_SHA}
+  # - name: deploy
+  #   image: loq9/drone-nomad
+  #   settings:
+  #     addr: http://nomad.it-premium.internal
+  #     template: application.nomad
+    # when:
+    #   event:
+    #     - promote
