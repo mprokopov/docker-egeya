@@ -63,6 +63,44 @@ job "egeya" {
       }
       template {
         data = <<EOF
+{
+    "appearance": {
+        "notes_per_page": 10,
+        "respond_to_dark_mode": true,
+        "show_view_counts": false,
+        "show_sharing_buttons": false
+    },
+    "comments": {
+        "default_on": false,
+        "require_gip": false,
+        "fresh_only": false
+    },
+    "template": "acute",
+    "db": {
+        "server": "{{ .Data.data.host }}",
+        "user_name": "{{ .Data.data.username }}",
+        "passw": "{{ .Data.data.password }}",
+        "name": "{{ .Data.data.name }}"
+    },
+    "language": "en",
+    "blog_title": "Discover Docker, K8s and Hashicorp Nomad with Maksym Prokopov",
+    "author": "Maksym Prokopov",
+    "author_email": "",
+    "notifications": {
+        "new_comments": false
+    },
+    "blog_subtitle": "The blog about containerisation, virtual machines and useful shell snippets and findings",
+    "meta_description": "The blog about containerisation, virtual machines and useful shell snippets and findings",
+    "timezone": {
+        "offset": 3600,
+        "is_dst": false
+    }
+}
+EOF
+  destination = "secrets/settings.json"
+      }
+      template {
+        data = <<EOF
 {{- with secret "instances/data/egeya/database" }}
 DATABASE_URL=mysql2://{{ .Data.data.username }}:{{ .Data.data.password }}@{{ .Data.data.host }}/{{ .Data.data.name }}
 MYSQL_HOST={{ .Data.data.host }}
