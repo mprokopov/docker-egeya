@@ -63,7 +63,12 @@ job "egeya" {
       }
       template {
         data = <<EOF
-DATABASE_URL="mysql2://{{- with secret "database/creds/egeya" -}}{{ .Data.username }}:{{ .Data.password }}{{- end -}}@db-02.it-premium.local/egeya"
+{{- with secret "instances/data/egeya/database" }}
+DATABASE_URL=mysql2://{{ .Data.data.username }}:{{ .Data.data.password }}@{{ .Data.data.host }}/{{ .Data.data.name }}
+MYSQL_HOST={{ .Data.data.host }}
+MYSQL_USER={{ .Data.data.username }}
+MYSQL_PASSWORD={{ .Data.data.password }}
+MYSQL_DATABASE={{ .Data.data.name }}
 EOF
         destination = "secrets/database.env"
         env = true
