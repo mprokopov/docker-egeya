@@ -1,24 +1,57 @@
-FROM php:8.2-apache
-MAINTAINER Maksym Prokopov<mprokopov@gmail.com>
+FROM php:8.2-apache-bullseye AS builder
 
-RUN apt-get update && apt-get install -y libpng-dev libzip-dev zlib1g-dev libjpeg-dev libmcrypt-dev unzip git  \
-    && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-configure gd \
-    && docker-php-ext-install gd mysqli pdo_mysql zip
+# Proper labels instead of deprecated MAINTAINER
+LABEL maintainer="Maksym Prokopov<mprokopov@gmail.com>" \
+      org.opencontainers.image.description="BlogEngine application" \
+      org.opencontainers.image.version="4134"
 
-ENV VERSION 4134
-ENV DIST e2_distr_v${VERSION}.zip
-ENV URL https://blogengine.ru/download/${DIST}
+# Group ENV variables
+ENV VERSION=4134 \
+    DIST=e2_distr_v4134.zip \
+    URL=https://blogengine.ru/download/e2_distr_v4134.zip
 
-RUN curl --insecure -O $URL && unzip -o $DIST -d /var/www/html
+# Install dependencies and clean up in a single layer
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    libpng-dev \
+    libzip-dev \
+    zlib1g-dev \
+    libjpeg-dev \
+    libmcrypt-dev \
+    unzip \
+    git && \
+    rm -rf /var/lib/apt/lists/* && \
+    docker-php-ext-configure gd && \
+    docker-php-ext-install -j$(nproc) gd mysqli pdo_mysql zip && \
+    curl --insecure -O $URL && \
+    unzip -o $DIST -d /var/www/html && \
+    rm $DIST && \
+    chown -R www-data:www-data /var/www/html && \
+    a2enmod rewrite
 
-COPY override_database_settings.php .
-COPY entrypoint.sh /usr/local/bin
+# Copy configuration files
+COPY override_database_settings.php /var/www/html/
+COPY entrypoint.sh /usr/local/bin/
 
-RUN chown -R www-data:www-data /var/www/html
-RUN a2enmod rewrite
+# Set proper permissions for entrypoint
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Add security measures
+RUN set -ex && \
+    mkdir -p /var/www/html/tmp && \
+    chown www-data:www-data /var/www/html/tmp && \
+    chmod 755 /var/www/html/tmp && \
+    echo "ServerTokens Prod" >> /etc/apache2/apache2.conf && \
+    echo "ServerSignature Off" >> /etc/apache2/apache2.conf
+
+# Use non-root user
+USER www-data
+
+# Add healthcheck
+HEALTHCHECK --interval=30s --timeout=3s --start-period=30s --retries=3 \
+    CMD curl -f http://localhost/ || exit 1
+
+EXPOSE 80
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["apache2-foreground"]
-
-EXPOSE 80
